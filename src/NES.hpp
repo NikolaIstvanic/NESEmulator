@@ -29,7 +29,7 @@ class NES {
 
     private:
         std::array<uint8_t, SIZE_CPU> cpuRAM;
-        uint32_t clocks = 0;
+        uint16_t clocks = 0;
         uint8_t dma_page = 0x00;
         uint8_t dma_addr = 0x00;
         uint8_t dma_data = 0x00;

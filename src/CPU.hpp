@@ -16,6 +16,7 @@ class CPU {
         void irq();
         void nmi();
         void connectNES(NES* n) { nes = n; }
+        void logInfo();
         
         uint16_t cycles = 0;
 

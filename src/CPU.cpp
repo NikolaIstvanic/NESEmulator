@@ -1,3 +1,4 @@
+#include <iostream>
 #include <memory>
 
 #include "CPU.hpp"
@@ -48,8 +49,13 @@ void CPU::step() {
         additional_cycle = 0;
         cycles = this->instruction_rom[opcode].cycles;
         cycles += (this->*instruction_rom[opcode].op)() & additional_cycle;
+        //logInfo();
     }
     cycles--;
+}
+
+void CPU::logInfo() {
+    std::cout << "PC = 0x" << std::hex << PC << ": " << instruction_rom[opcode].name << std::endl;
 }
 
 void CPU::irq() {

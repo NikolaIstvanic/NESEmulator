@@ -76,7 +76,7 @@ uint8_t NES::cpuRead8(uint16_t addr, bool bReadOnly) {
 }
 
 uint16_t NES::cpuRead16(uint16_t addr, bool bReadOnly) {
-    return (cpuRead8(addr+ 1, bReadOnly) << 8) | cpuRead8(addr, bReadOnly);
+    return (cpuRead8(addr + 1, bReadOnly) << 8) | cpuRead8(addr, bReadOnly);
 }
 
 void NES::cpuWrite8(uint16_t addr, uint8_t data) {
